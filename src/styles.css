@@ -32,6 +32,10 @@ body {
   margin: 5px 20px;
 }
 
+.logo {
+  max-width: 10%;;
+}
+
 .navbar ul {
   display: flex;
   flex-direction: row;
@@ -68,6 +72,14 @@ body {
   background-color: #003f8c;
   border: none;
   border-radius: 5px;
+  padding: 10px 17px 12px;
+}
+
+.main-button {
+  color: #ffffff;
+  background-color: #003f8c;
+  border: none;
+  border-radius: 5px;
   padding: 16px 23px 18px;
 }
 
@@ -87,7 +99,7 @@ body {
 
 .panel {
   display: flex;
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   border: none;
   border-radius: 10px;

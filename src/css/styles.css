@@ -14,7 +14,7 @@ body {
 
 .bg-img {
   background-image: 
-    url(../img/Docker-blue-Hero.png);
+    url(../../img/Docker-blue-Hero.png);
   background-size: cover;
   position: fixed;
   height: 90%;

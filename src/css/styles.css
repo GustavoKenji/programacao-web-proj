@@ -69,7 +69,15 @@ body {
 }
 
 .login {
-	width: 80px;
+  color: #ffffff;
+  background-color: transparent;
+	width: 125px;
+  border-style: groove;
+  border-color: #ffffff;
+  border-radius: 5px;
+  padding: 13px 17px 12px;
+  font-size: 14px;
+	font-weight: 600;
 }
 
 .default {
@@ -79,7 +87,7 @@ body {
   border-radius: 5px;
   padding: 13px 17px 12px;
 	width: 125px;
-	height: 40px;
+	height: 45px;
 	font-size: 14px;
 	font-weight: 600;
 }

@@ -180,6 +180,12 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1600px) {
+  .panel {
+    margin-top: 5%;
+  }
+}
+
 /* login-panel css */
 #login-panel {
   position: fixed;
@@ -225,14 +231,14 @@ body {
 }
 
 .login-form input {
-  margin: 0;
+  margin: 5px 0;
   padding: 10px 2px;
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 .login-form label {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   text-align: left;
   color: #000000;
 }
@@ -260,8 +266,6 @@ body {
   border-width: 0;
 }
 
-@media (max-width: 1600px) {
-  .panel {
-    margin-top: 5%;
-	}
+.invalid-input {
+  border-bottom: 2px solid rgb(242, 10, 10) !important;
 }

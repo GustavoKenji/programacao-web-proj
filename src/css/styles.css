@@ -1,0 +1,393 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #d6d6d6;
+}
+
+.main {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-img {
+  background-image: 
+    url(../../img/Docker-blue-Hero.png);
+  background-size: cover;
+  position: fixed;
+  height: 90%;
+}
+
+/* Navbar css */
+.navbar {
+  align-items: center;
+  color: #ffffff;
+  background-color: transparent;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 20px;
+}
+
+.logo {
+  max-width: 10%;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.navbar li {
+  margin-right: 35px;
+	font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar button {
+  margin-left: 20px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.login {
+  color: #ffffff;
+  background-color: transparent;
+	width: 125px;
+  border-style: groove;
+  border-color: #ffffff;
+  border-radius: 5px;
+  padding: 13px 17px 12px;
+  font-size: 14px;
+	font-weight: 600;
+  transition: 0.3s
+}
+
+.login:hover {
+  background-color: #105fd4;
+}
+
+.default {
+  color: #ffffff;
+  background-color: #003f8c;
+  border-width: 0;
+  border-style: groove;
+  border-radius: 5px;
+  padding: 13px 17px 12px;
+	width: 125px;
+	height: 45px;
+	font-size: 14px;
+	font-weight: 600;
+  transition: 0.3s
+}
+
+.default:hover {
+  background-color: #105fd4;
+}
+
+/* Main content css */
+.main-button {
+  color: #ffffff;
+  background-color: #003f8c;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 23px 18px;
+	width: 175px;
+	height: 60px;
+	font-size: 16px;
+	font-weight: 600;
+  transition: 0.3s
+}
+
+.main-button:hover {
+  cursor: pointer;
+  background-color: #105fd4;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+	margin-left: 20%;
+  margin-top: 60px;
+  padding-top: 20px;
+	font-size: 24px;
+}
+
+.content h3 {
+	color: #c4f0ff;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.panel {
+  display: flex;
+  width: 65%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 8%;
+}
+
+.panel img {
+  width: 25%;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-left: 50px;
+}
+
+.panel-content h5, span {
+  color: #105fd4;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+.panel-content h4 {
+  color: #000000;
+  margin-bottom: 0;
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.panel-content p {
+  color: #777777;
+}
+
+.panel-link {
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .panel {
+    margin-top: 5%;
+  }
+}
+
+/* login-panel css */
+#login-panel {
+  position: fixed;
+  z-index: 10001;
+  background-color: #fff;
+  width: 350px;
+  height: 100vh;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  right: 0;
+}
+
+.login-panel-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-panel-header h2 {
+  margin: auto;
+  padding-left: 40px;
+}
+
+.login-panel-header i {
+  margin: 20px 5px;
+  cursor:pointer;
+  font-size: 30px;
+  color: cornflowerblue;
+}
+
+.login-panel-header i:hover {
+  color: #071246;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+  margin: auto;
+  top: 50px;
+}
+
+.login-form input {
+  margin: 5px 0;
+  padding: 10px 2px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.login-form label {
+  margin: 10px 0 0 0;
+  text-align: left;
+  color: #000000;
+}
+
+#display-alert {
+  color: red;
+}
+
+.login-form input:focus {
+  border-bottom: 1px solid #000000 !important;
+}
+
+.login-form button {
+  margin: 30px 0 0 0;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: white;
+  border-width: 1px;
+  transition: 0.3s
+}
+
+.login-form button:hover {
+  background: cornflowerblue;
+  color: white;
+  border-color: cornflowerblue;
+  border-width: 0;
+}
+
+.invalid-input {
+  border-bottom: 2px solid rgb(242, 10, 10) !important;
+}
+
+/* Alert box */
+.failed-login-alert {
+  padding: 20px;
+  background-color: #f44336;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+  position: fixed;
+}
+
+.failed-login-alert span {
+  color: white;
+}
+
+.failed-login-alert i {
+  cursor:pointer;
+  font-size: 30px;
+  color: white;
+  float: right;
+  transition: 0.3s;
+}
+
+/* Color Page */
+#logout-button {
+  margin-right: 20px;
+  margin-left: -60px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: white;
+  border-width: 1px;
+  float: right;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#logout-button:hover {
+  background: cornflowerblue;
+  color: white;
+  border-color: cornflowerblue;
+  border-width: 0;
+}
+
+#color-page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+  position: fixed;
+  background-color: #c4f0ff;
+}
+
+#color-page h1 {
+  color: black;
+  text-align: center;
+}
+
+.color-palette-search {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20%;
+}
+
+.color-palette-search label {
+  margin: 10px 0;
+  font-size: 14pt;
+  text-align: center;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.palette-result {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display:flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.palette-title {
+  font-size: 14pt;
+  margin: 10px 0 5px 0;
+}
+
+.palette-square {
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+
+#input-word {
+  height: 60px;
+  border: none;
+  margin: 10px 0;
+  padding: 0px 10px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, .5);
+  position: relative;
+  width: 90%;
+  font-size: 14pt;
+}
+
+#submit-word {
+  position: relative;
+  width: 10%;
+  margin: 10px 0 0 0;
+  height: 62px;
+  background-color: seagreen;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+}

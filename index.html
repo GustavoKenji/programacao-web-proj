@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Web 1 - DockerPage</title>
-    <link rel="stylesheet" type="text/css" href="src/styles.css" />
-    <link rel="stylesheet" type="text/css" href="src/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
   </head>
+
   <body>
     <div class="main">
       <div class="bg-img">
+        <div id="failed-login" class="failed-login-alert" style="display:none">
+          <span id="failed-login-message"></span>
+          <i id="close-failed-login-message" class="fa fa-times-circle-o" aria-hidden="true"></i>
+        </div>
+        <aside id="login-panel" style="display:none">
+          <div class="login-panel-header">
+            <h2 style="color: cornflowerblue;margin-top: 20px;">LOGIN</h2>
+            <i id="close-login-panel" class="fa fa-times-circle-o" aria-hidden="true"></i>
+          </div>
+          <form id="login-form" class="login-form">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="nome@email.com"/>
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="password" placeholder="Senha válida"/>
+            <span id="display-alert"></span>
+            <button type="submit">Login</button>
+          </form>
+        </aside>
         <div class="navbar">
           <div class="left-side">
             <img src="./img/Docker-Logo-White.png" alt="docker_logo" class="logo"/>
@@ -24,9 +45,9 @@
             </ul>
           </div>
           <div class="right-side">
-            <span class="login">
+            <button id="loginBtn" class="login">
               Sign In
-            </span>
+            </button>
             <button class="default">Get Started</button>
           </div>
         </div>
@@ -44,15 +65,33 @@
             <h5>WHAT'S NEW</h5>
             <h4>Stack Overflow Survey Reconfirms Developers Love Docker</h4>
             <p>
-							Docker is the #1 most wanted and #2 most loved developer tool, 
+							Docker is the #1 most wanted and #2 most loved developer tool,
 							and helps millions of developers build, share and run any app, anywhere - on-prem or in the cloud.
             </p>
-            <span>
+            <span class="panel-link">
               Learn More!
             </span>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="color-page" style="display: none;">
+      <button id="logout-button">Logout</button>
+      <h1>Colour Lovers - API</h1>
+      <div class="color-palette-search">
+        <label for="input-word">Insira uma palavra e será exibida uma paleta de cores aleatória que combina com ela:</label>
+        <label style="color: red;" id="input-word-error"></label>
+        <div style="display: flex;">
+          <input type="text" id="input-word" name="input-word" />
+          <button id="submit-word">Enviar <i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div id="results"></div>
+    </div>
   </body>
+
+  <script src="./src/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </html>

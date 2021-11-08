@@ -78,6 +78,7 @@ body {
   padding: 13px 17px 12px;
   font-size: 14px;
 	font-weight: 600;
+  transition: 0.3s
 }
 
 .login:hover {
@@ -95,6 +96,7 @@ body {
 	height: 45px;
 	font-size: 14px;
 	font-weight: 600;
+  transition: 0.3s
 }
 
 .default:hover {
@@ -112,6 +114,7 @@ body {
 	height: 60px;
 	font-size: 16px;
 	font-weight: 600;
+  transition: 0.3s
 }
 
 .main-button:hover {
@@ -257,6 +260,7 @@ body {
   font-weight: bold;
   background-color: white;
   border-width: 1px;
+  transition: 0.3s
 }
 
 .login-form button:hover {
@@ -268,4 +272,35 @@ body {
 
 .invalid-input {
   border-bottom: 2px solid rgb(242, 10, 10) !important;
+}
+
+/* Alert box */
+.failed-login-alert {
+  padding: 20px;
+  background-color: #f44336;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+  position: fixed;
+}
+
+.failed-login-alert span {
+  color: white;
+}
+
+.failed-login-alert i {
+  cursor:pointer;
+  font-size: 30px;
+  color: white;
+  float: right;
+  transition: 0.3s;
+}
+
+#color-page {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #105fd4;
+  color: #fff;
+  text-align: center;
 }

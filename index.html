@@ -14,6 +14,10 @@
   <body>
     <div class="main">
       <div class="bg-img">
+        <div id="failed-login" class="failed-login-alert" style="display:none">
+          <span id="failed-login-message"></span>
+          <i id="close-failed-login-message" class="fa fa-times-circle-o" aria-hidden="true"></i>
+        </div>
         <aside id="login-panel" style="display:none">
           <div class="login-panel-header">
             <h2 style="color: cornflowerblue;margin-top: 20px;">LOGIN</h2>
@@ -70,6 +74,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="color-page" style="display: none;">
+      <h1>Colour Lovers - API</h1>
+      <button id="logout-button">Logout</button>
     </div>
   </body>
 

@@ -33,7 +33,7 @@ $ npm start
 
 ## Critérios de avaliação
 
-    [x] - verificação de preenchimento de campos obrigatório
-    [x] - validação da unicidade e autenticidade de campos de email e login
+    [ ] - verificação de preenchimento de campos obrigatório
+    [ ] - validação da unicidade e autenticidade de campos de email e login
     [ ] - permissão de publicação apenas ao usuário administrador
     [ ] - instalação de um serviço de hospedagem

@@ -41,7 +41,7 @@ loginPassword.addEventListener('change', (event) => {
     }
 });
 
-loginForm.addEventListener('submit', (event) => {
+loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     let emailInput = loginEmail.value;
@@ -55,7 +55,7 @@ loginForm.addEventListener('submit', (event) => {
         return;
     }
 
-    const login = await requestLogin(valEmail, valPass);
+    const login = await requestLogin(emailInput, passwordInput);
     if (!login.error) {
         saveSession(login);
         saveUserNameLocalstorage(login);

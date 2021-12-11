@@ -20,7 +20,7 @@ function requestLogin(user, pass) {
         }).then(data => {
             return data;
         }).catch(err => {
-            console.error("deu esse erro >>> ", err);
+            console.error("Foi encontrado o seguinte erro >>> ", err);
         });
     } catch (error) {
         console.error('erro', error);

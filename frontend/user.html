@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do usuário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./src/css/user.css">
+</head>
+
+<body>
+    <h1>Página do usuário</h1>
+    <nav>
+        <div id="userprofile">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <span id="username-display"></span>
+        <button id="colorBtn">Api de cores</button>
+        <button id="showUserBtn">Criar usuário</button>
+        <button id="postBtn">Fazer um novo post</button>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+    <div id="content">
+        
+        <section id="user-section" style="display: none;">
+            <h2>Criar usuário</h2>
+            <form id="createUserForm">
+                <label for="user">Email:</label>
+                <input type="email" name="user" placeholder="email@exemplo.com"/>
+                <label for="pass">Senha:</label>
+                <input type="password" name="pass" placeholder="senha">
+                <div id="user-role">
+                    <label for="role">O usuário é administrador:</label>
+                    <input type="checkbox" name="role" value="admin"/>
+                </div>
+            </form>
+            <button id="createUserBtn">Criar</button>
+            <h2>usuários cadastrados:</h2>
+            <div id="list-users">
+
+            </div>
+        </section>
+
+        <section id="color-section" style="display: none;">
+            <h2>Colour lover - api</h2>
+            <div class="color-actions">
+                <label for="input-name-color">Insira seu nome e serão exibidas paletas de cores aleatórias que combina
+                    com ele:</label>
+                <label style="color: red;" id="input-name-error"></label>
+                <div style="display: flex;">
+                    <input type="text" id="input-name-color" name="input-name-color" />
+                    <button id="submit-name-color">Enviar <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="results">
+            </div>
+        </section>
+
+        <section id="post" style="display: none;">
+            <h2>Faça um post</h2>
+            <div class="post-zone" enctype="multipart/form-data">
+                <form id="post-form">
+                    <label for="title">Título do post:</label>
+                    <input name="title" type="text" placeholder="Título" />
+                    <label for="text">Texto da postagem:</label>
+                    <textarea type="text" name="text" placeholder="Texto ..."></textarea>
+										<input type="file" id="upload-image" name="upload-image"/>
+                </form>
+                <button id="postZoneBtn">Postar</button>
+            </div>
+        </section>
+
+        <section id="last-posts" style="display: inherit;">
+            <h2>Veja os últimos posts</h2>
+            <div id="posts-list">
+            </div>
+        </section>
+    </div>
+</body>
+<script src="./src/js/configs.js"></script>
+<script src="./src/js/LoginService.js"></script>
+<script src="./src/js/SessionService.js"></script>
+<script src="./src/js/UserSession.js"></script>
+<script src="./src/s/PostService.js"></script>
+<script src="./src/js/ColorService.js"></script>
+<script src="./src/js/UserPage.js"></script>
+
+</html>

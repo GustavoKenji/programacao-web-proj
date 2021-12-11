@@ -7,7 +7,7 @@ Aluno responsável: Gustavo Kenji Komatsu - 2050811
 
 Site base: https://www.docker.com/
 
-Credenciais de teste da API de login: 
+Credenciais de login: 
 |Email|Senha|
 |-----|----|
-|eve.holt@reqres.in|cityslicka|
+|admin@teste.com|teste|

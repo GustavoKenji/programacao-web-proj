@@ -5,7 +5,7 @@ function requestLogin(user, pass) {
             password: pass.trim()
         };
 
-        return fetch(`${API_URL}/login`, {
+        return fetch(`${API_URL}login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

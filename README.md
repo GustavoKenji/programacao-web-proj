@@ -10,4 +10,5 @@ Site base: https://www.docker.com/
 Credenciais de login: 
 |Email|Senha|
 |-----|----|
-|admin@teste.com|teste|
+|admin@admin.com|admin|
+|user@teste.com|testeuser|

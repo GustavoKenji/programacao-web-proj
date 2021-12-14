@@ -15,7 +15,7 @@ class LoginController {
       if (user) {
 				let verifySession = await this.SessionModel.consultSession({ username: body.username });
 				if(verifySession === null || verifySession === undefined) {
-					if (body.password == user.password) {
+					if (compareSync(body.password, user.password)) {
 						let session = await this.SessionModel.createSession({
 							username: body.username,
 							session: sessionID,

@@ -3,8 +3,12 @@
 O projeto 3 da disciplina de <b>Programação web</b> visa simular a api utilizada pelos alunos durante o desenvolvimento do projeto anterior.
 
 Os seguintes requisitos devem ser satisfeitos:
+## Critérios de avaliação
 
-
+    [ ] - verificação de preenchimento de campos obrigatório
+    [ ] - validação da unicidade e autenticidade de campos de email e login
+    [ ] - permissão de publicação apenas ao usuário administrador
+    [ ] - instalação de um serviço de hospedagem
 
 ## Como utilizar
 
@@ -30,10 +34,3 @@ $ npm start
 ## Informações importantes
 
 - Os nomes, hexadecimais e decimais das cores foram retirados de https://en.wikipedia.org/wiki/Web_colors .
-
-## Critérios de avaliação
-
-    [ ] - verificação de preenchimento de campos obrigatório
-    [ ] - validação da unicidade e autenticidade de campos de email e login
-    [ ] - permissão de publicação apenas ao usuário administrador
-    [ ] - instalação de um serviço de hospedagem

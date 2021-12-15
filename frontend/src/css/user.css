@@ -138,6 +138,11 @@ nav button:hover {
     background:white;
 }
 
+#post-search {
+    display: flex;
+    flex-direction: row;
+}
+
 #last-posts {
     position: relative;
     width: 90%;

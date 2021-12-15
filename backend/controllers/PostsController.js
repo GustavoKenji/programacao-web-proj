@@ -10,9 +10,9 @@ class PostsController {
 	async createPost(request, response) {
 		try {
 			const { body } = request;
-			const { title, text, imageUrl } = body;
+			const { title, text } = body;
 			console.info('criando um post ...');
-			let post = await this.PostsModel.createPost({ title: title, text: text, imageUrl: imageUrl });
+			let post = await this.PostsModel.createPost({ title: title, text: text });
 			return response.status(200).json(post);
 		} catch (error) {
 			new Error(error);
@@ -38,6 +38,16 @@ class PostsController {
 		}
 	}
 
+	async searchPost(request, response) {
+		try {
+			const { body } = request;
+			const { title } = body;
+			let posts = await this.PostsModel.findOne({ title: title });
+			return response.status(200).json(posts);
+		} catch (error) {
+			throw new Error(error);
+		}
+	}
 }
 
 module.exports = new PostsController();

@@ -62,13 +62,12 @@
 
         <section id="post" style="display: none;">
             <h2>Faça um post</h2>
-            <div class="post-zone" enctype="multipart/form-data">
+            <div class="post-zone">
                 <form id="post-form">
                     <label for="title">Título do post:</label>
                     <input name="title" type="text" placeholder="Título" />
                     <label for="text">Texto da postagem:</label>
                     <textarea type="text" name="text" placeholder="Texto ..."></textarea>
-										<input type="file" id="upload-image" name="upload-image"/>
                 </form>
                 <button id="postZoneBtn">Postar</button>
             </div>
@@ -76,6 +75,11 @@
 
         <section id="last-posts" style="display: inherit;">
             <h2>Veja os últimos posts</h2>
+            <div id="post-search">
+                <label for="title">Busca de posts pelo título:</label>
+                <input id="post-search-input" name="title" type="text" placeholder="Título" />
+                <button id="post-search-button">Buscar</button>
+            </div>
             <div id="posts-list">
             </div>
         </section>
@@ -85,7 +89,7 @@
 <script src="./src/js/LoginService.js"></script>
 <script src="./src/js/SessionService.js"></script>
 <script src="./src/js/UserSession.js"></script>
-<script src="./src/s/PostService.js"></script>
+<script src="./src/js/PostService.js"></script>
 <script src="./src/js/ColorService.js"></script>
 <script src="./src/js/UserPage.js"></script>
 

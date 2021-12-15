@@ -19,7 +19,6 @@ function renderPosts(posts) {
             <div>
                 <h3>${p.title}</h3>
                 <p>${p.text}</p>
-								<image src="${API_URL}/public/Uploads/${p.imageUrl}" />
                 <button 
                     id=${p._id}
                     class="delete-post-btn" onClick="deletePost(this.id)"
@@ -45,23 +44,6 @@ function createPost(req) {
     })
 }
 
-function uploadImage(req) {
-	const formData = new FormData();
-	formData.append("upload-image", req);
-	return fetch(`${API_URL}/upload-image`, {
-			method: "POST",
-			enctype: 'multipart/form-data',
-			body: formData
-	}).then(res => {
-			if (res.status === 200) {
-					return res.json();
-			} else {
-					return { acknowledged: false }
-			}
-	})
-}
-
-
 function deletePost(id) {
     return fetch(`${API_URL}/posts?id=${id}`, {
         method: "DELETE",
@@ -76,4 +58,21 @@ function deletePost(id) {
             return;
         }
     });
+}
+
+function searchPost(req) {
+    return fetch(`${API_URL}/searchPost`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(req)
+    })
+}
+
+function clearPosts() {
+    let listPosts = document.querySelector('#posts-list');
+    listPosts.innerHTML = `
+        ${listPosts.getInnerHTML()}
+        <div>
+        </div>
+    `;
 }

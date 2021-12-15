@@ -32,11 +32,13 @@ const submitButtonColor = document.querySelector("#submit-name-color");
 const inputNameColor = document.querySelector("#input-name-color");
 const inputNameError = document.querySelector("#input-name-error");
 const resultsPallete = document.querySelector("#results");
+const postSearchBtn = document.querySelector("#post-search-button")
 let resPallete = [];
 
 //formularios
 const createUserForm = document.querySelector('#createUserForm');
 const postForm = document.querySelector('#post-form');
+const searchPostInput = document.querySelector("#post-search-input")
 
 colorBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -142,17 +144,14 @@ postZoneBtnForm.addEventListener('click', async(event) => {
     let inputs = postForm.elements;
     let title = inputs[0].value;
     let text = inputs[1].value;
-		let image = inputs[2].files[0];
-		let imageUrl = image.name;
-    const data = { title, text, imageUrl };
     if(!userLevel.includes("admin")) {
         window.alert("Somente administradores podem postar.");
         return;
     }
-    if(title !== "" && text !== "" && image !== "" && imageUrl !== "") {
+    if(title !== "" && text !== "") {
+        const data = { title: title, text: text };
         const res = await createPost(data);
-				const res2 = await uploadImage(image);
-        if(res.acknowledged || res2.acknowledged) {
+        if(res.acknowledged) {
             window.alert("Post criado com sucesso.");
             window.location.reload();
             return;
@@ -183,3 +182,25 @@ inputNameColor.addEventListener('change', (event) => {
 			inputNameError.innerText = "";
 	}
 });
+
+postSearchBtn.addEventListener('click', async(event) => {
+    event.preventDefault();
+    const searchTitle = searchPostInput.value;
+    if(searchTitle !== "") {
+        const data = { title: searchTitle };
+        console.log(">>>>>>", data);
+        const res = await searchPost(data);
+        console.log(">>>>>>", res.status);
+        if(res.status === 200) {
+            post = res;
+            clearPosts();
+            renderPosts(post);
+
+            return;
+        }
+    } else {
+        window.alert("Você precisa informar um título para realizar a busca.");
+        window.location.reload();
+        return;
+    }
+})

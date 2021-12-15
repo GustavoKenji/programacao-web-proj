@@ -19,6 +19,15 @@ class Post{
 		}
 	}
 
+	async findOne(req) {
+        try {
+            const posts = await this.connect();
+            return await posts.findOne(req);
+        } catch (error) {
+            throw new Error(error);
+        }
+    }
+
 	async createPost(req) {
 		try {
 			const post = await this.connect();

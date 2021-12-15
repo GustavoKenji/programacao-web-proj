@@ -25,6 +25,8 @@ async (request, response) => await PostsController.createPost(request, response)
 
 routes.get('/posts', async (request, response) => await PostsController.index(request, response));
 
+routes.post('/searchPost', async (request, response) => await PostsController.searchPost(request, response));
+
 routes.delete('/posts',
     (request, response) => PostsController.deletePost(request, response)
 );

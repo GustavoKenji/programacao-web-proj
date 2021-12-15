@@ -1,14 +1,36 @@
-Projeto 1 - AS34A Programação para Web - N14 - 2021_02
+# Projeto 3
 
-Aluno responsável: Gustavo Kenji Komatsu - 2050811
-|Nome completo|RA|
-|-------------|--|
-|Gustavo Kenji Komatsu|2050811|
+O projeto 3 da disciplina de <b>Programação web</b> visa simular a api utilizada pelos alunos durante o desenvolvimento do projeto anterior.
 
-Site base: https://www.docker.com/
+Os seguintes requisitos devem ser satisfeitos:
+## Critérios de avaliação
 
-Credenciais de login: 
-|Email|Senha|
-|-----|----|
-|admin@admin.com|admin|
-|user@teste.com|testeuser|
+    [ ] - verificação de preenchimento de campos obrigatório
+    [ ] - validação da unicidade e autenticidade de campos de email e login
+    [ ] - permissão de publicação apenas ao usuário administrador
+    [ ] - instalação de um serviço de hospedagem
+
+## Como utilizar
+
+Para rodar esse projeto localmente, primeiro é preciso entrar até a pasta onde ele está localizado e executar os seguinte comandos:
+
+<i>Obs: É importante que haja uma instância do mongodb rodando localmente na porta 27017. Caso sua instância não esteja nessa URI, altere o arquivo o campo `mongoURL` no arquivo `config.js` para apontar para a Url do seu mongodb local.</i>
+
+> Inserir os valores de cores dentro do banco de dados locais.
+
+```bash
+$ node launch.js
+```
+
+> Para rodar a aplicação em modo desenvolvimento, permite alteraçãoes enquanto mantém o servidor em pé:
+```bash
+$ npm run dev
+```
+> Para rodar a aplicação normalmente ou em um servidor remoto:
+```bash
+$ npm start
+```
+
+## Informações importantes
+
+- Os nomes, hexadecimais e decimais das cores foram retirados de https://en.wikipedia.org/wiki/Web_colors .
